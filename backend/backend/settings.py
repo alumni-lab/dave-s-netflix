@@ -126,3 +126,5 @@ STATIC_URL = '/static/'
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:3000',
 )
+
+AUTH_USER_MODEL = 'daves_netflix.user'
