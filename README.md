@@ -29,6 +29,14 @@ You will need the following installed on your machine:
   ```
   $ cd backend/
   ```
+- Run the migrations:
+  ```
+  $ python manage.py migrate
+  ```
+- Seed the database:
+  ```
+  $ python manage-py seed daves_netflix number=15
+  ```
 - Launch the server:
   ```
   $ python manage.py runserver
