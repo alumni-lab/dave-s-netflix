@@ -1,11 +1,5 @@
 from django.db import models
-from django.contrib.auth import get_user_model
-from django.contrib.auth.models import AbstractUser
-
-
-class User(AbstractUser):
-    # Create a custom User based on the built-in User model allowing future customization
-    pass
+from django.contrib.auth.models import User
 
 
 class StreamingService(models.Model):
@@ -14,7 +8,7 @@ class StreamingService(models.Model):
 
 
 class StreamingAccount(models.Model):
-    owner = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name="owner")
+    owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name="owner")
     streaming_service = models.ForeignKey(StreamingService, on_delete=models.CASCADE)
     login = models.CharField(max_length=30)
     password = models.CharField(max_length=30)
@@ -25,5 +19,5 @@ class StreamingAccount(models.Model):
 
 
 class UserStreamingAccount(models.Model):
-    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     streaming_account = models.ForeignKey(StreamingAccount, on_delete=models.CASCADE)
