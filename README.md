@@ -35,7 +35,7 @@ You will need the following installed on your machine:
   ```
 - Seed the database:
   ```
-  $ python manage-py seed daves_netflix number=15
+  $ python manage.py seed daves_netflix number=15
   ```
 - Launch the server:
   ```
