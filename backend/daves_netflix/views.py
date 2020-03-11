@@ -1,3 +1,8 @@
 from django.shortcuts import render
+from rest_framework import viewsets
+from .serializers import StreamingAccountSerializer
+from .models import StreamingAccount
 
-# Create your views here.
+class StreamingAccountView(viewsets.ModelViewSet):
+    serializer_class = StreamingAccountSerializer
+    queryset = StreamingAccount.objects.all()

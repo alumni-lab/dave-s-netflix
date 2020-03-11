@@ -9,7 +9,7 @@ export default function SteamingAccountList() {
     useEffect(() => {
         axios.get('/api/streaming-account/')
           .then(res => setStreamingAccounts(res.data))
-    }, [])
+    }, []);
 
     return (
         <div>
