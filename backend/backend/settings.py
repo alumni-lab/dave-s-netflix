@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'daves_netflix',
+    'django_seed',
 ]
 
 MIDDLEWARE = [
