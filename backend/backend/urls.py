@@ -19,7 +19,8 @@ from rest_framework import routers
 from daves_netflix import views
 
 router = routers.DefaultRouter()
-router.register(r"streaming-account", views.StreamingAccountView, "streaming-account")
+router.register(r"streaming-accounts", views.StreamingAccountView, "streaming-account")
+router.register(r"users", views.UserView, "user")
 
 urlpatterns = [
     path("admin/", admin.site.urls),

@@ -35,7 +35,7 @@ You will need the following installed on your machine:
   ```
 - Seed the database:
   ```
-  $ python manage.py seed daves_netflix number=15
+  $ python manage.py seed daves_netflix --number=15
   ```
 - Launch the server:
   ```
@@ -53,3 +53,8 @@ You will need the following installed on your machine:
   ```
   $ yarn start
   ```
+- To access the site, navigate to http://localhost:3000
+- To access the django admin site, navigate to http://localhost:8000/admin
+- To access the REST framework API, navigate to http://localhost:8000/api
+
+The REST Framework API provides a clear map of all the endpoints and what they return
